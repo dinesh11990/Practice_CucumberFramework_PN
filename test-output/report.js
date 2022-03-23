@@ -1,165 +1,52 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./features/Customers.feature");
 formatter.feature({
   "line": 1,
-  "name": "Login",
+  "name": "Customers",
   "description": "",
-  "id": "login",
+  "id": "customers",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "line": 16,
-  "name": "Login Data Driven",
-  "description": "",
-  "id": "login;login-data-driven",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 15,
-      "name": "@regression"
-    }
-  ]
-});
-formatter.step({
-  "line": 18,
-  "name": "User Launch Chrome browser",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 19,
-  "name": "User Opens URL \"http://admin-demo.nopcommerce.com/login\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 20,
-  "name": "User enters Email as \"\u003cemail\u003e\" and Password as \"\u003cpassword\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 21,
-  "name": "Click on Login",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 22,
-  "name": "Page Title should be \"Dashboard / nopCommerce administration\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 23,
-  "name": "User click on Log out link",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 24,
-  "name": "Page Title should be \"Your store. Login\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 25,
-  "name": "close browser",
-  "keyword": "And "
-});
-formatter.examples({
-  "line": 27,
-  "name": "",
-  "description": "",
-  "id": "login;login-data-driven;",
-  "rows": [
-    {
-      "cells": [
-        "email",
-        "password"
-      ],
-      "line": 29,
-      "id": "login;login-data-driven;;1"
-    },
-    {
-      "cells": [
-        "admin@yourstore.com",
-        "admin"
-      ],
-      "line": 30,
-      "id": "login;login-data-driven;;2"
-    },
-    {
-      "cells": [
-        "admin@yourstore.com",
-        "admin123"
-      ],
-      "line": 31,
-      "id": "login;login-data-driven;;3"
-    }
-  ],
-  "keyword": "Examples"
-});
 formatter.before({
-  "duration": 3401285900,
+  "duration": 2783707300,
   "status": "passed"
 });
-formatter.scenario({
-  "line": 30,
-  "name": "Login Data Driven",
+formatter.background({
+  "line": 3,
+  "name": "Below are the common steps for each scenario",
   "description": "",
-  "id": "login;login-data-driven;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 15,
-      "name": "@regression"
-    }
-  ]
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.step({
-  "line": 18,
+  "line": 5,
   "name": "User Launch Chrome browser",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 19,
+  "line": 6,
   "name": "User Opens URL \"http://admin-demo.nopcommerce.com/login\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 20,
+  "line": 7,
   "name": "User enters Email as \"admin@yourstore.com\" and Password as \"admin\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 21,
+  "line": 8,
   "name": "Click on Login",
   "keyword": "And "
 });
 formatter.step({
-  "line": 22,
-  "name": "Page Title should be \"Dashboard / nopCommerce administration\"",
+  "line": 9,
+  "name": "User can view Dashboard",
   "keyword": "Then "
-});
-formatter.step({
-  "line": 23,
-  "name": "User click on Log out link",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 24,
-  "name": "Page Title should be \"Your store. Login\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 25,
-  "name": "close browser",
-  "keyword": "And "
 });
 formatter.match({
   "location": "Steps.user_Launch_Chrome_browser()"
 });
 formatter.result({
-  "duration": 240448000,
+  "duration": 169838399,
   "status": "passed"
 });
 formatter.match({
@@ -172,7 +59,7 @@ formatter.match({
   "location": "Steps.user_Opens_URL(String)"
 });
 formatter.result({
-  "duration": 2253540400,
+  "duration": 2955710700,
   "status": "passed"
 });
 formatter.match({
@@ -189,178 +76,112 @@ formatter.match({
   "location": "Steps.user_enters_Email_as_and_Password_as(String,String)"
 });
 formatter.result({
-  "duration": 424552799,
+  "duration": 256871100,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.click_on_Login()"
 });
 formatter.result({
-  "duration": 6963268800,
+  "duration": 18129790200,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Dashboard / nopCommerce administration",
-      "offset": 22
-    }
-  ],
-  "location": "Steps.page_Title_should_be(String)"
+  "location": "Steps.user_can_view_Dashboard()"
 });
 formatter.result({
-  "duration": 3147140200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.user_click_on_Log_out_link()"
-});
-formatter.result({
-  "duration": 5079392200,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Your store. Login",
-      "offset": 22
-    }
-  ],
-  "location": "Steps.page_Title_should_be(String)"
-});
-formatter.result({
-  "duration": 3044914500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.close_browser()"
-});
-formatter.result({
-  "duration": 763833500,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 2076271800,
+  "duration": 82480999,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 31,
-  "name": "Login Data Driven",
+  "line": 12,
+  "name": "Add a new Customer",
   "description": "",
-  "id": "login;login-data-driven;;3",
+  "id": "customers;add-a-new-customer",
   "type": "scenario",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "line": 15,
-      "name": "@regression"
+      "line": 11,
+      "name": "@sanity"
     }
   ]
 });
 formatter.step({
+  "line": 14,
+  "name": "User click on customers Menu",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "Click on customers Menu Item",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Click on Add new button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "User can view Add new customer page",
+  "keyword": "Then "
+});
+formatter.step({
   "line": 18,
-  "name": "User Launch Chrome browser",
-  "keyword": "Given "
+  "name": "User enter customer info",
+  "keyword": "When "
 });
 formatter.step({
   "line": 19,
-  "name": "User Opens URL \"http://admin-demo.nopcommerce.com/login\"",
-  "keyword": "When "
+  "name": "Click on Save button",
+  "keyword": "And "
 });
 formatter.step({
   "line": 20,
-  "name": "User enters Email as \"admin@yourstore.com\" and Password as \"admin123\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "And "
+  "name": "User can view confirmation message \"The new customer has been added successfully.\"",
+  "keyword": "Then "
 });
 formatter.step({
   "line": 21,
-  "name": "Click on Login",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 22,
-  "name": "Page Title should be \"Dashboard / nopCommerce administration\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 23,
-  "name": "User click on Log out link",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 24,
-  "name": "Page Title should be \"Your store. Login\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 25,
   "name": "close browser",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.user_Launch_Chrome_browser()"
+  "location": "Steps.user_click_on_customers_Menu()"
 });
 formatter.result({
-  "duration": 310599,
+  "duration": 3126908100,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "http://admin-demo.nopcommerce.com/login",
-      "offset": 16
-    }
-  ],
-  "location": "Steps.user_Opens_URL(String)"
+  "location": "Steps.click_on_customers_Menu_Item()"
 });
 formatter.result({
-  "duration": 2280758700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "admin@yourstore.com",
-      "offset": 22
-    },
-    {
-      "val": "admin123",
-      "offset": 60
-    }
-  ],
-  "location": "Steps.user_enters_Email_as_and_Password_as(String,String)"
-});
-formatter.result({
-  "duration": 355098000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.click_on_Login()"
-});
-formatter.result({
-  "duration": 4016187800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Dashboard / nopCommerce administration",
-      "offset": 22
-    }
-  ],
-  "location": "Steps.page_Title_should_be(String)"
-});
-formatter.result({
-  "duration": 130868900,
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepDefinitions.Steps.page_Title_should_be(Steps.java:96)\r\n\tat ✽.Then Page Title should be \"Dashboard / nopCommerce administration\"(./features/Login.feature:22)\r\n",
+  "duration": 3164890300,
+  "error_message": "org.openqa.selenium.ElementNotInteractableException: element not interactable\n  (Session info: chrome\u003d99.0.4844.82)\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027LAPTOP-I3ABMITL\u0027, ip: \u0027192.168.1.94\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.13\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\\Users\\DINESH~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52306}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a1def9ed55961cfe4534141a0b76a575\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)\r\n\tat com.krish.pageObjects.AddcustomerPage.clickOnCustomersMenuItem(AddcustomerPage.java:62)\r\n\tat stepDefinitions.Steps.click_on_customers_Menu_Item(Steps.java:141)\r\n\tat ✽.And Click on customers Menu Item(./features/Customers.feature:15)\r\n",
   "status": "failed"
 });
 formatter.match({
-  "location": "Steps.user_click_on_Log_out_link()"
+  "location": "Steps.click_on_Add_new_button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "Steps.user_can_view_Add_new_customer_page()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "Steps.user_enter_customer_info()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "Steps.click_on_Save_button()"
 });
 formatter.result({
   "status": "skipped"
@@ -368,11 +189,11 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Your store. Login",
-      "offset": 22
+      "val": "The new customer has been added successfully.",
+      "offset": 36
     }
   ],
-  "location": "Steps.page_Title_should_be(String)"
+  "location": "Steps.user_can_view_confirmation_message(String)"
 });
 formatter.result({
   "status": "skipped"

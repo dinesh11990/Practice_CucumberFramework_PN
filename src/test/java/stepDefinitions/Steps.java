@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 //import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -121,65 +122,54 @@ public class Steps extends BaseClass {
 
 	//-------------------------------Customer feature step definitions--------------------------------------------
 
-
-	/*@Then("^User can view Dashboard$")
+	@Then("^User can view Dashboard$")
 	public void user_can_view_Dashboard()  {
 
 		addCust = new AddcustomerPage(driver);
-		Assert.assertEquals("Dashboard / nopCommerce administration", addCust.getPageTitle());
-
-	}
-
+		Assert.assertEquals("Dashboard / nopCommerce administration", addCust.getPageTitle());}
 
 	@When("^User click on customers Menu$")
 	public void user_click_on_customers_Menu() throws InterruptedException  {
 
 		Thread.sleep(3000);
-		addCust.clickOnCustomersMenu();
-	}
+		addCust.clickOnCustomersMenu();}
 
 	@When("^Click on customers Menu Item$")
 	public void click_on_customers_Menu_Item() throws InterruptedException  {
 
 		Thread.sleep(3000);
-		addCust.clickOnCustomersMenuItem();
-
-	}
+		addCust.clickOnCustomersMenuItem();}
 
 	@When("^Click on Add new button$")
 	public void click_on_Add_new_button() throws InterruptedException {
 
 		addCust.clickOnAddnew();
-		Thread.sleep(2000);
-	}
+		Thread.sleep(2000);}
 
 	@Then("^User can view Add new customer page$")
 	public void user_can_view_Add_new_customer_page(){
 
-		Assert.assertEquals("Add a new customer / nopCommerce administration", addCust.getPageTitle());
-
-	}
+		Assert.assertEquals("Add a new customer / nopCommerce administration", addCust.getPageTitle());}
 
 	@When("^User enter customer info$")
 	public void user_enter_customer_info() throws InterruptedException {
-		
 		
 		logger.info("******Adding new customer**********");
 		logger.info("******Providing customer details**********");
 		String email = randomSting()+"@gmail.com";
 		addCust.setEmail(email);
 		addCust.setPassword("test123");
+		Thread.sleep(5000);
 		addCust.setCustomerRoles("Guest");
-		Thread.sleep(3000);
-
+		Thread.sleep(5000);
 		addCust.setManagerOfVendor("Vendor 2");
+		Thread.sleep(5000);
 		addCust.setGender("Male");
 		addCust.setFirstName("Dinesh");
 		addCust.setLastName("Krishna");
 		addCust.setDob("03/05/1990");
 		addCust.setCompanyName("Renault");
-		addCust.setAdminContent("Testing");
-	}
+		addCust.setAdminContent("Testing");}
 
 	@When("^Click on Save button$")
 	public void click_on_Save_button() throws InterruptedException{
@@ -191,13 +181,12 @@ public class Steps extends BaseClass {
 	@Then("^User can view confirmation message \"([^\"]*)\"$")
 	public void user_can_view_confirmation_message(String msg) {
 
-		Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("The new customer has been added successfully"));
-
-	}
+Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("The new customer has been added successfully"));
+}
 
 	//----------------------Steps for searching a customer using Email ID---------------------------------
 
-	@When("^Enter cutomer Email$")
+	/*@When("^Enter cutomer Email$")
 	public void enter_cutomer_Email()  {
 
 		logger.info("******Searching customer by email id**********");
